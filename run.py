@@ -4,7 +4,9 @@ import time
 
 app = Flask(__name__)
 
-
+@app.route("/")
+def func():
+    return "is Building"
 
 @app.route("/deploy", methods=["POST", "GET"])
 def deploy():
