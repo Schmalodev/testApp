@@ -20,14 +20,9 @@ def deploy():
     pyautogui.press("enter")
     time.sleep(5)
     pyautogui.write("python donwload.py")
-    time.sleep(1)
-    pyautogui.press("win")
-    pyautogui.press("tab")
     time.sleep(5)
     pyautogui.press("enter")
-    pyautogui.press("alt")
-    pyautogui.press("F4")
     return ":D"
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=5000)
