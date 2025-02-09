@@ -8,6 +8,7 @@ app = Flask(__name__)
 def func():
     return "is Building"
 
+# DEPLOY (DONT TOUCH)
 @app.route("/deploy", methods=["POST", "GET"])
 def deploy():
     time.sleep(5)
