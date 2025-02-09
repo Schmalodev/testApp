@@ -4,9 +4,12 @@ import time
 
 app = Flask(__name__)
 
-@app.route("/building")
+@app.route("/sort", methods=["POST", "GET"])
 def func():
-    return "is Building"
+    return render_template("sort_item.html")
+
+
+
 
 # DEPLOY (DONT TOUCH)
 @app.route("/deploy", methods=["POST", "GET"])
