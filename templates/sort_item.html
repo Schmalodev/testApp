@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
     <title>Sort</title>
 </head>
 <body>
@@ -13,12 +13,14 @@
                 <h1>Bestellung</h1>
             </div>
             <div>
-                <form action="">
+                <form>
                     <ul class="list_element">
-                        <li>Pulover</li>
+                        {% for todo in todos %}
+                        <li>Pulover: {{todo["12"]["Bestellt"]["Pulover"]}}</li>
+                        <li>Tassen: {{todo["12"]["Bestellt"]["Tassen"]}}</li>
+                        <li>Öffner: {{todo["12"]["Bestellt"]["Öffner"]}}</li>
+                        {% endfor%} 
                     </ul>
-                    <div class="padding"></div>
-                    <input class="font" type="text" placeholder="Bestell numer">
                     <div class="padding"></div>
                     <button class="font">Submit</button>
                 </form>
