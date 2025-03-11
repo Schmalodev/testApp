@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fetch API Example</title>
+</head>
+<body>
+    <button id="fetchButton">Daten abrufen</button>
+    <script>
+        document.getElementById('fetchButton').addEventListener('click', function() {
+            fetch("https://schmalodev.pythonanywhere.com/")
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById("output").innerHTML = JSON.stringify(data);
+                })
+                .catch(error => console.error('Fehler:', error));
+        });
+    </script>
+
+    <h1>API Daten abrufen</h1>
+    <li id="output">0</li>
+</body>
+</html>
